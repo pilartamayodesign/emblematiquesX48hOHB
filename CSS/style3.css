@@ -1,0 +1,1211 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+} 
+
+body {
+	background-color: #FFF6EF;
+	overflow-x: hidden;
+}
+
+
+@font-face {
+	font-family: Elanor;
+	src: url('../FONTS/Elanorfont.otf');
+}
+
+/*CABECERA */
+
+header {
+	width: 100vw;
+	height: 150px;
+	background-color: #892424;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px;
+}
+
+
+.imagotipo {
+	width: 145px;
+	height: auto;
+	display: flex;
+}
+
+.iconMenu img {
+	width: 100%;
+	transform: scale(1.5);
+	padding-right: 20px;
+	display: none;
+	cursor: pointer;
+}
+
+.nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav li {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 30px;
+	margin: 20px;
+	padding: 5px;		
+	list-style: none;
+	cursor: pointer;
+	border-bottom:  1px solid transparent;
+    transition: border-color 0.3s ease, opacity 0.3s ease;
+	
+}
+
+.nav a {
+	text-decoration: none;
+	color: #FFE6A7;
+}
+
+.nav li:hover,.selected {
+    border-bottom-color: #FFE6A7; 
+    opacity: 0.8;  
+}
+
+
+.menuDesplegable {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    background-color: #FFE6A7;
+    z-index: 3; 
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+}
+
+.menuDesplegable.mostrar {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menuDesplegable li {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFE6A7;
+    padding: 20px;
+    cursor: pointer; 
+    list-style: none; 
+
+}
+
+.menuDesplegable a {
+	text-decoration: none;
+	color: #892424;
+}
+
+
+.closemenu > img {
+	width: 40px;
+	position: absolute;
+	top: 60px;
+	right: 35px;
+	cursor: pointer;
+	z-index: 4;
+	margin-right: 25px;
+}
+
+/*BREADCRUMBS*/
+
+.breadcrumb ul svg {
+	width: 25px;
+}
+
+.breadcrumb {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 30px;
+	padding-top: 100px;
+	padding-left: 180px;
+}
+
+.breadcrumb ul {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	gap: 15px;
+}
+
+.breadcrumb ul li a {
+	text-decoration: none;
+	color: #892424;
+}
+
+.breadcrumb ul li:last-child a {
+	font-weight: 800;
+}
+
+
+/*RESERVAR*/
+
+
+
+#reservar {
+	width: 70vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-top: 50px;	
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.conceptos ul {
+	width: 60vw;
+	height: auto;
+
+}
+
+.conceptos li{
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 30px;
+	color: #432818;
+}
+
+/*COLUMNAS*/
+
+
+.columnas {
+	width: 80%;
+	height: auto;
+	display: flex;   
+	flex-direction: row;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+}
+
+.imagenFondo2 {
+	width: 100%;
+	height: auto;
+	display: flex;
+	position: absolute;
+	z-index: -1;
+	top: -20%;
+	left: -15%;
+	opacity: 0.75;
+}
+
+.datosreserva {
+	width: 40%;
+	height: auto;
+	margin-top: 50px;
+}
+
+.datosreserva input {
+	width: 80%;
+	height: 55px;
+	background: #FFFFFF;
+	border: 1px solid #892424;
+	border-radius: 15px;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+	color: #656565;
+	padding-left: 20px;
+	margin-bottom: 25px;
+
+}
+
+
+/*CALENDARIO*/
+
+
+.contenedorcalendario {
+	width: 25%;
+	height: auto;
+}
+
+
+.calendarheader {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 40px;
+
+}
+
+.calendarheader h1 {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 23px;
+	color: #432818;
+
+}
+
+.calendar {
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid-template-columns: repeat(7, minmax(50px,1fr));
+	grid-template-rows: 50px;
+	grid-auto-rows: 50px;
+}
+
+.dayname {
+	text-align: center;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 23px;
+	color: #99582A;
+}
+
+.day {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 15px 15px;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	color: #892424;
+	cursor: pointer;
+	position: relative;
+}
+
+.day:hover {
+	border-radius: 50%;
+	padding: 10px 10px;
+	border:  solid 1px;
+	border-color: #892424;
+	background: #FFFFFF;
+}
+
+.day-disabled {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 15px 15px;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	color: #892424;
+	position: relative;
+	opacity: 0.5;
+}
+
+
+
+
+.day.hover-fixed {
+    border-radius: 50%;
+    padding: 12px 12px;
+    border: solid 1px;
+    border-color: #892424;
+    background: #FFFFFF;
+}
+
+
+/*HORARIO*/
+
+.horario {
+	width: 25%;
+	height: auto;
+	margin-top: 140px;
+	margin-left: 150px;
+}
+
+.horario > h3, label {
+
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 19px;
+	color: #892424;
+}
+
+.horario > h3 {
+
+	padding-bottom: 20px;
+
+}
+
+.caja {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	border: 1px solid #892424;
+	border-radius: 15px;
+	background-color: #FFFF;
+}
+
+.caja form {
+	padding-left: 50px;
+	padding-top: 20px;
+}
+
+.caja input {
+	width: 25px;
+	height: 25px;
+	accent-color: #892424;	
+}
+
+.caja label {	
+	margin-left: 20px;
+}
+
+.imagenFondo1 img {
+	width: auto;
+	height: auto;
+	display: flex;
+	position: absolute;
+	z-index: -1;
+	right: 0;
+	top: -100%;
+}
+
+
+/*BOTÓN RESERVAR*/
+
+
+.reservafinal {
+	width: 80vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    
+}
+
+.boton {
+	display: flex;
+	flex-wrap: wrap;	
+	z-index: 2;
+}
+
+
+
+.boton button {
+	background-color: #432818;
+	border-radius: 15px;
+	padding: 20px 75px;
+	border: 2px solid transparent;
+	cursor: pointer;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 26px;
+	text-align: center;
+	color: #FFE6A7;
+	transition: border-color 0.3s;
+	
+}
+
+.boton button:hover {
+	background: #FFE6A7;
+	border-color: #892424;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+	color: #892424;
+}
+
+
+.manodcha img {
+	width: auto;
+	height: auto;
+	position: absolute;
+	right: 0;
+	top: 10px;
+  	animation: animacionmano2 1.5s ease-in-out infinite alternate; 
+}
+
+@keyframes animacionmano2 {
+  0% {right: 0;}
+  50% {right: 200px;}
+  100% {right: 0;
+  }
+}
+
+
+/*MODAL*/
+
+#modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+}
+
+.contenedormodal {
+	width: 40vw;
+	height: auto;
+	margin: auto;
+	background-color: #FFFF;
+	border-radius: 15px;
+	padding: 50px 50px 30px 50px;
+	border: 6px solid #892424;
+	display: grid;
+	gap: 5px;
+	place-items: center;
+}
+
+.contenedormodal > h2, p {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	color: #432818;
+	padding-top: 20px;
+}
+
+
+.contenedormodal > a {
+	margin-top: 30px;
+}
+
+.contenedormodal a {
+	text-decoration: none;
+	background-color: #892424;
+	padding: 10px;
+	border-radius: 15px;
+	width: 30%;
+	height: auto;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 26px;
+	text-align: center;
+	color: #FFE6A7;
+	transition: box-shadow .2s;
+}
+
+.contenedormodal a:hover {
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.30);
+}
+
+.botonesModal {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 20px;
+	
+}
+
+.botonesModal a {
+	width: 40%;
+	height: auto;
+	text-decoration: none;
+	background-color: #892424;
+	padding: 20px;
+	border-radius: 15px;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 26px;
+	text-align: center;
+	color: #FFE6A7;
+	transition: box-shadow .2s;
+}
+
+
+
+#filtroOpaco {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
+}
+
+
+/*FOOTER*/
+
+.contenedor {
+	width: 100vw;
+	height: auto;
+	background-color: #892424;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.newsletter {
+	width: 45vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 100px;
+	padding-bottom: 50px;
+	order: 1;
+}
+
+input {
+	width: 85%;
+	height: 50px;
+	background: #FFFFFF;
+	border-radius: 15px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 27px;
+	color: rgba(68, 60, 60, 1);
+	padding-left: 20px;
+	margin-bottom: 25px;
+	border: 0;
+}
+
+.textos > h3 {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 24px;
+	color: #FFE6A7;
+	margin-top: 125px;
+	padding-bottom: 40px;
+}
+
+.textos > h4 {
+	width: 85%;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	color: #FFE6A7;
+	padding-bottom: 30px;
+}
+
+
+.textos button {
+	width: 180px;
+	height: 50px;
+	background: #FFFFFF;
+	color: #892424;
+	border-radius: 15px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 25px;
+	text-align: center;
+	cursor: pointer;
+	border: 0;
+}
+
+
+.contacto {
+	width: 25vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 50px;
+	order: 2;
+}
+
+.infolegal {
+	width: 30vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 50px;
+	order: 3;
+}
+
+.redessociales {
+	width: 100vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: right;
+	order: 4;
+}
+
+.iconosrrss {
+	width: 30vw;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-right: 20%;
+	margin-top: -8%;
+}
+
+
+.copyright {
+	width: 100vw;
+	height: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #892424;
+	display: flex;
+	flex-wrap: wrap;
+	order: 5;
+
+}
+
+.copyright > h5 {
+	width: 100%;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 30px;
+	color: #FFE6A7;
+	text-align: center;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.backlogo {
+	width: 100vw;
+	height: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.backlogomovil {
+	display: none;
+}
+
+
+/*MEDIA QUERIES FOOTER 1500PX*/
+
+@media screen and (max-width: 1500px) {
+
+.contenedor {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.newsletter {
+	order: 1;
+	width: 100vw;
+	background-color: #892424;
+	margin-bottom: 40px;	
+}
+
+.textos > h3 {
+	margin-top: 60px;
+}
+
+.redessociales {
+	order: 2;
+	margin-top: 20px;	
+	margin-bottom: 30px;
+}
+
+.iconosrrss {
+	width: 100vw;
+	display: flex;	
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.contacto {
+	width: 100vw;
+	order: 3;
+	padding-left: 100px;
+	background-color: #FFF6EF;
+}
+
+.contacto  h3 {
+	margin-top: 40px;
+	color: #432818;
+}
+
+.contacto  h4 {
+	color: #432818;
+	padding-bottom: 20px;
+}
+
+.infolegal {
+	width: 100vw;
+	order: 4;
+	padding-left: 100px;
+	background-color: #FFF6EF;
+}
+
+.infolegal  h3 {
+	margin-top: 20px;
+	color: #432818;
+}
+
+.infolegal  h4 {
+	color: #432818;
+	padding-bottom: 20px;
+}
+
+.copyright {
+	width: 100vw;
+	order: 5;
+	background-color: #FFF6EF;
+	display: flex;
+	justify-content: center;
+}
+
+.copyright  h5 {
+	color: #432818;
+	background-color: #FFF6EF;
+}
+
+hr {
+	width: 90vw;
+	height: 0.5px;
+	color: #432818;
+	opacity: 0.5;
+	margin-top: 15px;
+}
+
+.backlogo {
+	order: 6;
+	display: flex;
+	margin-top: -30px;
+}
+
+}
+
+
+/*MEDIA QUERIES 1500PX*/
+
+@media screen and (max-width: 1500px) {
+
+
+.breadcrumb {
+	padding-left: 90px;
+}
+
+#reservar {
+	margin-left: 150px;
+}
+
+.columnas {
+	flex-direction: column;
+	margin-top: 50px;
+}
+
+.imagenFondo2 {
+	width: 100%;
+	height: auto;
+	display: flex;
+	position: absolute;
+	z-index: -1;
+	top: -20%;
+	
+}
+
+.datosreserva {
+	width: 100%;
+	margin-top: 40px;
+}
+
+.datosreserva input {
+	width: 100%;
+}
+
+.contenedorcalendario {
+	width: 90%;
+	height: auto;
+	margin-top: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+}
+.horario {
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 180px;
+}
+
+.imagenFondo1 img {
+	width: auto;
+	height: auto;
+	display: flex;
+	position: absolute;
+	z-index: -1;
+	right: -100px;
+	top: 730px;
+}
+
+
+.manodcha img {
+	display: none;
+}
+
+.reservafinal {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+}
+
+
+
+/*MEDIA QUERIES TIENDA 1200PX*/
+
+@media screen and (max-width: 1200px){
+
+.breadcrumb {
+	padding-left: 30px;
+	padding-top: 30px;
+	font-size: 18px;
+}
+
+
+.breadcrumb ul svg {
+	width: 20px;
+}
+
+
+#reservar li{
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+	color: #432818;
+}
+
+
+#modal {
+	width: 100vw;
+	height: 100vh;
+}
+
+.contenedormodal {
+	width: 80vw;
+	transform: scale(0.8);
+}
+
+.botonesModal a {
+	width: 100%;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+
+}	
+
+
+/*MEDIA QUERIES MENÚ HAMBURGUESA 1000PX*/
+
+@media screen and (max-width: 1000px) {
+
+
+header {
+	height: 100px;
+	padding: 20px;
+}
+
+.imagotipo {
+	transform: scale(0.75);
+}
+
+
+.iconMenu img {
+	transform: scale(1.2);
+}
+
+
+header .nav {
+	width: 100%;
+}
+
+.nav {
+	width: 100%;
+	display: none;
+}
+
+.iconMenu img {
+	display: block;
+}
+
+.menuDesplegable {
+	visibility: hidden;
+	height: 100vh;	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+
+.lista {
+	margin-top: 80px;
+}
+
+hr {
+	width: 90vw;
+	color: #892424;
+	margin-top: 25px;
+	margin-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rrss {
+	width: 100vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 35px;
+}
+
+
+.closemenu > img {
+	width: 35px;
+	position: absolute;
+	top: 35px;
+	right: 15px;
+	cursor: pointer;
+	z-index: 4;
+	margin-right: 25px;
+}
+
+
+}
+
+
+/*MEDIA QUERIES 768PX*/
+
+@media screen and (max-width: 768px) {
+
+
+#reservar {
+	margin-left: 100px;
+}
+
+.conceptos li {
+	font-size: 22px;
+}
+
+.datosreserva form {
+	margin-top: 50px;
+}
+
+
+.datosreserva input {
+	font-size: 20px;
+
+}
+
+.contenedorcalendario {
+	margin-top: 50px;
+}
+
+.imagenFondo2 {
+	width: 100%;
+	height: auto;
+	display: flex;
+	position: absolute;
+	z-index: -1;
+	top: -50%;
+	overflow-x: hidden;
+}
+
+.datosreserva {
+	margin-top: 5px;
+}
+
+
+.imagenFondo1 img {
+	transform: scale(0.8);
+	display: flex;
+	position: absolute;
+	z-index: -1;
+	right: -120px;
+	top: 700px;
+}
+
+.caja label {
+	font-size: 18px;
+} 
+
+#modal {
+	width: 100vw;
+	height: 100vh;
+}
+
+.contenedormodal {
+	transform: scale(0.8);
+}
+
+.botonesModal a {
+	width: 100%;
+	padding: 20px;
+	margin-top: 20px;
+}
+}
+
+
+/*MEDIA QUERIES FOOTER 768PX*/
+
+@media screen and (max-width: 768px) {
+
+.newsletter, .contacto, .infolegal {
+	padding-left: 50px;	
+}
+
+.newsletter h3 {
+	font-size: 22px;
+}
+
+.newsletter h4 {
+	font-size: 16px;
+}
+
+.contacto h3 {
+	font-size: 22px;
+}
+
+.contacto h4 {
+	font-size: 16px;
+}
+
+.infolegal h3 {
+	font-size: 22px;
+}
+
+.infolegal h4 {
+	font-size: 16px;
+}
+
+.copyright h5 {
+	font-size: 14px;
+}
+
+
+}
+
+
+/*MEDIA QUERIES 500PX*/
+
+@media screen and (max-width: 500px) {
+
+
+
+#reservar {
+	margin-left: 80px;
+}
+
+
+.contenedorcalendario {
+	transform: scale(0.9);
+	margin-left: -15px;
+
+}
+
+.horario {
+	margin-left: 10px;
+	width: 90%;
+	margin-top: 100px;
+}
+
+.caja form {
+	padding-left: 20px;
+}
+
+.caja label {
+	font-size: 16px;
+} 
+
+
+.imagenFondo1 img{
+	transform: scale(0.7);
+	top: 650px;
+}
+
+.boton button{
+	transform: scale(0.8);
+}
+
+
+#modal {
+	width: 100vw;
+}
+
+.contenedormodal {
+	transform: scale(0.8);
+}
+
+.botonesModal {
+	display: flex;
+	flex-direction: column;
+}
+
+.botonesModal a {
+	width: 100%;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+}

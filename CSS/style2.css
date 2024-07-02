@@ -1,0 +1,1169 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #FFF6EF;
+	overflow-x: hidden;
+}
+
+@font-face {
+	font-family: Elanor;
+	src: url('../FONTS/Elanorfont.otf');
+}
+
+/*CABECERA */
+
+header {
+	width: 100vw;
+	height: 150px;
+	background-color: #892424;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px;
+}
+
+
+.imagotipo {
+	width: 145px;
+	height: auto;
+	display: flex;
+}
+
+.iconMenu img {
+	width: 100%;
+	transform: scale(1.5);
+	padding-right: 20px;
+	display: none;
+	cursor: pointer;
+}
+
+.nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav li {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 30px;
+	margin: 20px;
+	padding: 5px;		
+	list-style: none;
+	cursor: pointer;
+	border-bottom:  1px solid transparent;
+    transition: border-color 0.3s ease, opacity 0.3s ease;
+	
+}
+
+.nav a {
+	text-decoration: none;
+	color: #FFE6A7;
+}
+
+.nav li:hover,.selected {
+    border-bottom-color: #FFE6A7; 
+    opacity: 0.8;  
+}
+
+
+.menuDesplegable {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    background-color: #FFE6A7;
+    z-index: 3; 
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.menuDesplegable.mostrar {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menuDesplegable li {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFE6A7;
+    padding: 20px;
+    cursor: pointer; 
+    list-style: none; 
+
+}
+
+.menuDesplegable a {
+	text-decoration: none;
+	color: #892424;
+}
+
+
+.closemenu > img {
+	width: 40px;
+	position: absolute;
+	top: 60px;
+	right: 35px;
+	cursor: pointer;
+	z-index: 4;
+	margin-right: 25px;
+}
+
+
+/*BREADCRUMBS*/
+
+.breadcrumb ul svg {
+	width: 25px;
+}
+
+.breadcrumb {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 30px;
+	padding-top: 100px;
+	padding-left: 180px;
+}
+
+.breadcrumb ul {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	gap: 15px;
+}
+
+.breadcrumb ul li a {
+	text-decoration: none;
+	color: #892424;
+}
+
+.breadcrumb ul li:last-child a {
+	font-weight: 800;
+}
+
+
+/*CASA GISPERT*/
+
+.contenedor1 {
+    width: 100vw;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.box1 {
+	width: 80vw;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+.imgconlogos {
+	width: 40vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	justify-content: center;
+	right: 0;	
+	z-index: 1;
+}
+
+.imagen img {
+	width: 40vw;
+	height: auto;
+	border-radius: 30px;
+}
+
+.iconos {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	position: static;
+}
+
+.iconos img {
+	padding: 15px;
+	margin-top: 40%;
+}
+
+
+.cajagranate {
+	width: 90%;
+	height: 70%;
+	background-color: #892424;
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	top: 25%;	
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.texto {
+	width: 50%;
+	height: auto;
+	position: absolute;
+	left: 3%;
+	top: 8%;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: justify;
+	letter-spacing: -0.01em;
+	color: #FFE6A7;
+	padding:  30px;
+}
+
+.texto > h2 {
+	width: 100%;
+	font-family: 'Elanor';
+	font-style: normal;
+	font-weight: 200;
+	font-size: 36px;
+	line-height: 30px;
+	color: #FFE6A7;
+	padding-bottom: 20px;
+
+}
+
+.texto h3 {
+	font-family: 'Elanor';
+	font-style: normal;
+	font-weight: 200;
+	font-size: 24px;
+	line-height: 30px;
+	color: #FFE6A7;
+	padding-bottom: 10px;
+
+}
+
+.texto > p {
+	margin-top: 30px;
+}
+
+/*GALERÍA*/
+
+#galeria {
+	width: 100vw;
+	height: auto;  
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-top: 100px;
+	margin-bottom: 150px;
+
+
+}
+
+#galeria > h2 {
+	width: 40vw;
+  	height: auto;
+  	text-align: center;
+	font-family: 'Elanor';
+	font-style: normal;
+	font-weight: 200;
+	font-size: 30px;
+	line-height: 30px;/
+	text-align: center;
+	text-transform: uppercase;
+	background-image: url("../IMG/Logos/Cartela.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #FFE6A7;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+/*CARRUSEL*/
+
+.carruselcompleto {
+	width: 100vw;
+	height: auto;	
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.carrusel {
+	width: 75vw;
+	height: auto;
+	display: flex;
+	flex-wrap: nowrap;
+	position: relative;
+	overflow: hidden;
+	transition: scroll-left 0.5s ease;
+	z-index: 1;
+}
+
+.imagencarrusel img {
+	display: flex;
+	width: auto;
+	height: auto;
+	border-radius: 30px;
+	margin-right: 40px;
+	z-index: 2;
+
+
+}
+
+.arrows {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	z-index: 1;
+
+}
+
+.arrows img {
+	width: 70px;
+	height: auto;
+	margin: 20px;
+	
+}
+
+.texturafondo2 img {
+	position: absolute;
+	z-index: 0;
+	top: 20%;
+	right: 0;
+
+}
+
+/*FIN CARRUSEL*/
+
+
+
+.imgsgaleria {
+	display: none;
+}
+
+
+.botones {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+.botones button {
+	background-color: #432818;
+	border-radius: 15px;
+	padding: 20px 45px;
+	border: 2px solid transparent;
+	cursor: pointer;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 26px;
+	text-align: center;
+	color: #FFE6A7;
+	transition: border-color 0.3s;
+	margin: 15px;
+}
+
+
+.botones .anteriortiendadesactivado, .siguientetiendadesactivado {
+    background-color: #432818;
+    border-radius: 15px;
+    padding: 20px 45px;
+    border: 2px solid transparent;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFE6A7;
+    transition: border-color 0.3s;
+    margin: 15px;
+    cursor: not-allowed; 
+    pointer-events: none; 
+    opacity: 0.5;
+}
+
+
+.botones .siguientetienda:hover {
+	background: #FFE6A7;
+	border-color: #892424;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+	color: #892424;
+}
+
+.botones .anteriortienda:hover {
+	background: #FFE6A7;
+	border-color: #892424;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+	color: #892424;
+}
+
+
+
+/*ILUSTRACIONES DE FONDO TODAS LAS SUBPÁGINAS 2 (UBICACIÓN PERSONALIZADA)*/
+
+.bascula img {
+	height: auto;
+	position: absolute;
+	left: -140px;
+	top: 0;
+	transform: scale(1.1);
+}
+
+.granoscafe img {
+	position: absolute;
+	top: -20%;
+	right: 5%;
+	z-index: -1;
+}
+
+.abanico img {
+	height: auto;
+	position: absolute;
+	left: -120px;
+	top: 8%;
+	transform: scale(1.2);
+}
+
+.alfiletero img {
+	position: absolute;
+	top: -20%;
+	right: 5%;
+	z-index: -1;
+	transform: scale(1.1);
+	margin-bottom: 50px;
+}
+
+.tetera img {
+	height: auto;
+	position: absolute;
+	left: -120px;
+	top: 8%;
+	transform: scale(1.2);
+}
+
+.especias img {
+	position: absolute;
+	top: -20%;
+	right: 5%;
+	z-index: -1;
+	transform: scale(1.1);
+	margin-bottom: 50px;
+}
+
+.vela img {
+	height: auto;
+	position: absolute;
+	left: -10%;
+	top: 8%;
+	transform: scale(1.2);
+}
+
+.tresvelas img {
+	position: absolute;
+	top: -5%;
+	right: 10%;
+	z-index: -1;
+	margin-bottom: 50px;
+}
+
+.cubiertos img {
+	height: auto;
+	position: absolute;
+	left: -10%;
+	top: 5%;
+	transform: scale(1.4);
+}
+
+
+.tablaqueso img {
+	position: absolute;
+	top: -5%;
+	right: 10%;
+	z-index: -1;
+	transform: scale(1.2);
+}
+
+
+.turrones img {
+	height: auto;
+	position: absolute;
+	left: -8%;
+	top: 5%;
+	transform: scale(1.2);
+}
+
+.almendras img {
+	position: absolute;
+	top: -5%;
+	right: 10%;
+	z-index: -1;
+}
+
+
+/*FOOTER*/
+
+.contenedor {
+	width: 100vw;
+	height: auto;
+	background-color: #892424;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.newsletter {
+	width: 45vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 100px;
+	padding-bottom: 50px;
+	order: 1;
+}
+
+input {
+	width: 85%;
+	height: 50px;
+	background: #FFFFFF;
+	border-radius: 15px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 27px;
+	color: rgba(68, 60, 60, 1);
+	padding-left: 20px;
+	margin-bottom: 25px;
+	border: 0;
+}
+
+.textos > h3 {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 24px;
+	color: #FFE6A7;
+	margin-top: 125px;
+	padding-bottom: 40px;
+}
+
+.textos > h4 {
+	width: 85%;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	color: #FFE6A7;
+	padding-bottom: 30px;
+}
+
+
+.textos button {
+	width: 180px;
+	height: 50px;
+	background: #FFFFFF;
+	color: #892424;
+	border-radius: 15px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 25px;
+	text-align: center;
+	cursor: pointer;
+	border: 0;
+}
+
+
+.contacto {
+	width: 25vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 50px;
+	order: 2;
+}
+
+.infolegal {
+	width: 30vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 50px;
+	order: 3;
+}
+
+.redessociales {
+	width: 100vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: right;
+	order: 4;
+}
+
+.iconosrrss {
+	width: 30vw;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-right: 20%;
+	margin-top: -8%;
+}
+
+
+.copyright {
+	width: 100vw;
+	height: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #892424;
+	display: flex;
+	flex-wrap: wrap;
+	order: 5;
+
+}
+
+.copyright > h5 {
+	width: 100%;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 30px;
+	color: #FFE6A7;
+	text-align: center;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.backlogo {
+	width: 100vw;
+	height: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.backlogomovil {
+	display: none;
+}
+
+
+
+/*MEDIA QUERIES FOOTER 1500PX*/
+
+@media screen and (max-width: 1500px) {
+
+.menuDesplegable {
+    display: none;
+}
+
+.contenedor {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.newsletter {
+	order: 1;
+	width: 100vw;
+	background-color: #892424;
+	margin-bottom: 40px;	
+}
+
+.textos > h3 {
+	margin-top: 60px;
+}
+
+.redessociales {
+	order: 2;
+	margin-top: 20px;	
+	margin-bottom: 30px;
+}
+
+.iconosrrss {
+	width: 100vw;
+	display: flex;	
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.contacto {
+	width: 100vw;
+	order: 3;
+	padding-left: 100px;
+	background-color: #FFF6EF;
+}
+
+.contacto  h3 {
+	margin-top: 40px;
+	color: #432818;
+}
+
+.contacto  h4 {
+	color: #432818;
+	padding-bottom: 20px;
+}
+
+.infolegal {
+	width: 100vw;
+	order: 4;
+	padding-left: 100px;
+	background-color: #FFF6EF;
+}
+
+.infolegal  h3 {
+	margin-top: 20px;
+	color: #432818;
+}
+
+.infolegal  h4 {
+	color: #432818;
+	padding-bottom: 20px;
+}
+
+.copyright {
+	width: 100vw;
+	order: 5;
+	background-color: #FFF6EF;
+	display: flex;
+	justify-content: center;
+}
+
+.copyright  h5 {
+	color: #432818;
+	background-color: #FFF6EF;
+}
+
+hr {
+	width: 90vw;
+	height: 0.5px;
+	color: #432818;
+	opacity: 0.5;
+	margin-top: 15px;
+}
+
+.backlogo {
+	order: 6;
+	display: flex;
+	margin-top: -30px;
+}
+
+}
+
+
+
+
+/*MEDIA QUERIES TIENDA 1200PX*/
+
+@media screen and (max-width: 1200px){
+
+
+.breadcrumb {
+	padding-left: 30px;
+	padding-top: 30px;
+	font-size: 18px;
+}
+
+
+.breadcrumb ul svg {
+	width: 20px;
+}
+
+
+.box1 {
+	width: 100vw;
+}	
+
+.cajagranate {
+	width: 100vw;
+	height: 95%;
+	background-color: #892424;
+	z-index: 0;
+	top: 20%;	
+}
+
+.imgconlogos {
+	width: 100vw;
+	height: auto;
+	display: flex;
+}
+
+.imagen img {
+	width: 400px;
+	height: 400px;		
+}
+
+.iconos img {
+	padding: 15px;
+	margin-top: 10%;
+	
+}
+
+.texto {
+	width: 95%;
+	left: 0;
+	margin-left:auto;
+	margin-right:auto;
+	right:0;
+	top: 40%;
+}
+
+
+
+.cajagranate p {
+	width: 100%;
+	height: auto;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: justify;
+	letter-spacing: -0.01em;
+	color: #FFE6A7;
+}
+
+#galeria {
+	margin-top: 250px;
+}
+
+#galeria h2 {
+	width: 70vw; 
+
+}
+
+.carruselcompleto {
+	width: 100vw;
+	transform: scale(0.8);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+}
+
+
+/*MEDIA QUERIES MENÚ HAMBURGUESA 1000PX*/
+
+@media screen and (max-width: 1000px) {
+
+
+header {
+	height: 100px;
+	padding: 20px;
+}
+
+.imagotipo {
+	transform: scale(0.75);
+}
+
+
+.iconMenu img {
+	transform: scale(1.2);
+}
+
+
+header .nav {
+	width: 100%;
+}
+
+.nav {
+	width: 100%;
+	display: none;
+}
+
+.iconMenu img {
+	display: block;
+}
+
+.menuDesplegable {
+	visibility: hidden;
+	height: 100vh;	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+
+.lista {
+	margin-top: 80px;
+}
+
+hr {
+	width: 90vw;
+	color: #892424;
+	margin-top: 25px;
+	margin-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rrss {
+	width: 100vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 35px;
+}
+
+
+.closemenu > img {
+	width: 35px;
+	position: absolute;
+	top: 35px;
+	right: 15px;
+	cursor: pointer;
+	z-index: 4;
+	margin-right: 25px;
+}
+
+
+}
+
+
+/*MEDIA QUERIES VARIOS*/
+
+
+@media screen and (max-width: 768px) {
+
+.box1 {
+	width: 100vw;
+}
+
+.cajagranate {
+	height: 110%;
+}
+
+.imagen img {
+	width: 300px;
+	height: 300px;	
+}
+
+.iconos img {
+	transform: scale(0.8);
+}
+
+.texto {
+	top: 20%;
+}
+
+#galeria {
+	margin-top: 300px;
+	margin-bottom: 10px;
+}
+
+
+#galeria h2 {
+	font-size: 26px;
+	margin-top: 50px;
+}
+
+.arrows {
+	display: none;
+}
+
+.carrusel img {
+	width: 100vw;
+}
+
+
+.carruselcompleto {
+	display: none;
+	
+}
+
+.imgsgaleria {
+	display: unset;
+
+}
+
+.imgsgaleria {
+	position: relative;	
+	margin-bottom: 40px;
+}
+
+
+.imgsgaleria img{
+	width: 80vw;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+
+
+.botones {
+	transform: scale(0.7);
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.granoscafe img {
+	transform: scale(0.8);
+	right: -20%;
+	top: -60%;
+	z-index: -3;
+}
+
+
+.alfiletero img {
+	position: absolute;
+	top: -60%;
+	right: -20%;
+	z-index: -1;
+	transform: scale(0.8);
+	margin-bottom: 20px;
+}
+
+.especias img {
+	position: absolute;
+	top: -60%;
+	right:0;
+	z-index: -1;
+	transform: scale(0.8);
+	
+}
+
+.vela img {
+	height: auto;
+	position: absolute;
+	left: -35%;
+	top: 0;
+	transform: scale(0.8);
+}
+
+.tresvelas img {
+	position: absolute;
+	top: -55%;
+	right: -20%;
+	z-index: -1;
+	transform: scale(0.8);
+}
+
+.cubiertos img {
+	height: auto;
+	position: absolute;
+	left: -25%;
+	top: 0;
+	transform: scale(1);
+}
+
+.tablaqueso img {
+	position: absolute;
+	top: -80%;
+	right: -30%;
+	z-index: -1;
+	transform: scale(1);
+}
+
+.turrones img {
+	height: auto;
+	position: absolute;
+	left: -20%;
+	top: 0;
+	transform: scale(0.8);
+}
+
+.almendras img {
+	position: absolute;
+	top: -60%;
+	right: -25%;
+	z-index: -1;
+	transform: scale(0.9);
+}
+
+
+}
+
+
+/*MEDIA QUERIES FOOTER 768PX*/
+
+@media screen and (max-width: 768px) {
+
+.newsletter, .contacto, .infolegal {
+	padding-left: 50px;	
+}
+
+.newsletter h3 {
+	font-size: 22px;
+}
+
+.newsletter h4 {
+	font-size: 16px;
+}
+
+.contacto h3 {
+	font-size: 22px;
+}
+
+.contacto h4 {
+	font-size: 16px;
+}
+
+.infolegal h3 {
+	font-size: 22px;
+}
+
+.infolegal h4 {
+	font-size: 16px;
+}
+
+.copyright h5 {
+	font-size: 14px;
+}
+
+
+}
